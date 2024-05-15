@@ -7,7 +7,7 @@ provider "aws" {
 }
 
 # Create KMS service
-module "kms" {
+module "aws-kms" {
   source = "your-org-name/kms/aws"
   description             = "My KMS key"
   deletion_window_in_days = 7  
