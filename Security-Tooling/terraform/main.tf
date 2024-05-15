@@ -21,12 +21,14 @@ module "secrets-manager" {
   source  = "terraform-aws-modules/secrets-manager/aws"
   version = "1.1.2"
   
-  name            = "my-secret"
-  secret_string   = jsonencode({
-      DB_HOST     = "db.example.com",
-      DB_USER     = "user",
-      DB_PASSWORD = "password"
-  })
+  name = "my-secret"
+  description = "This is my secret"
+
+  secret_string = "my-secret-value"
+
+  tags = {
+    Environment = "dev"
+  }
 }
 
 
