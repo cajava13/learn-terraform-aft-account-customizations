@@ -10,7 +10,7 @@ module "secret" {
   secret_string = "Shh don't tell anyone!"
 
   tags = {
-    Environment = "dev"
+    Environment = "Prod"
   }
 }
 ```
