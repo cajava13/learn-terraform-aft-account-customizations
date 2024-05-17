@@ -7,10 +7,10 @@ provider "aws" {
 }
 
 # Create KMS service
-module "aws-kms" {
-  # source = "your-org-name/kms/aws"
-  source  = "terraform-aws-modules/kms/aws"
+module "kms" {
+  source = "org/kms/aws"
   version = "3.0.0"
+  
   description             = "My KMS key"
   deletion_window_in_days = 7  
 }
