@@ -2,7 +2,7 @@ Here is Terraform configuration for AWS KMS using a module source from GitHub:
 
 ```hcl
 module "kms" {
-  source = "github.com/learn-terraform-aft-account-customizations/modules/kms"
+  source = "./learn-terraform-aft-account-customizations/modules/kms"
 
   name = "my-kms-key"
   description = "KMS key for encrypting S3 objects" 
