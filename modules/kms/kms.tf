@@ -17,6 +17,7 @@ module "kms" {
 
   tags = {
     Environment = "Prod"
+  }
 }
 
 # ```
