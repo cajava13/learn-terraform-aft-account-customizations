@@ -2,7 +2,7 @@ Here is a Terraform module for AWS KMS:
 
 ```hcl
 module "kms" {
-  source = "org/kms/aws"
+  source = "./modules/kms"
 
   key_description = "My KMS key"
   deletion_window_in_days = 7  
