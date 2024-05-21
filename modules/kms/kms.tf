@@ -1,8 +1,3 @@
-# Define the provider
-provider "aws" {
-  region = "us-east-1"
-}
-
 # Create KMS service
 module "kms" {
   source = "./modules/kms"
