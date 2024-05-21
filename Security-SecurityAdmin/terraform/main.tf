@@ -1,12 +1,10 @@
-# Create KMS service
 module "kms" {
-  source = "./modules/kms"
+  source  = "terraform-aws-modules/kms/aws"
   version = "3.0.0"
-  
-  name = "my-secret"
-  description = "This is my secret"
 
-  secret_string = "Shh don't tell anyone!"
+  description = "KMS key for encrypting EBS objects." 
+  deletion_window_in_days = 7  
+  enable_key_rotation = true
 
   tags = {
     Environment = "Prod"
