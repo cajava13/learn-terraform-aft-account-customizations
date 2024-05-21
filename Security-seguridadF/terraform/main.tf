@@ -4,9 +4,9 @@ provider "aws" {
 }
 
 module "kms" {
-  source = "./learn-terraform-aft-account-customizations/modules/kms"
+  source  = "terraform-aws-modules/kms/aws"
+  version = "3.0.0"
 
-  name = "my-kms-key"
   description = "KMS key for encrypting S3 objects" 
   deletion_window_in_days = 7  
   enable_key_rotation = true
