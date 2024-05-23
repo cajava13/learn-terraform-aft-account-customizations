@@ -10,7 +10,7 @@ module "kms" {
   enable_key_rotation = true
 
   tags = {
-    Environment = "dev"
+    Environment = "Prod"
   }
 }
 ```
