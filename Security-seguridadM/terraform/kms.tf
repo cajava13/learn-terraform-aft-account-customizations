@@ -5,11 +5,14 @@ module "kms" {
   description             = "KMS key for encrypting/decrypting data" 
   deletion_window_in_days = 7  
   enable_key_rotation     = true
+  key_usage               = "ENCRYPT_DECRYPT"
+  multi_region            = false
 
-  aliases = ["my-app-key"]
+
+  aliases = ["CMK"]
 
   tags = {
     Terraform   = "true"
-    Environment = "prod"
+    Environment = "Pruduction"
   }
 }
