@@ -9,7 +9,7 @@ module "kms" {
   multi_region            = false
 
 
-  aliases = ["CMK"]
+  aliases = ["CMK-EBS"]
 
   tags = {
     Terraform   = "true"
