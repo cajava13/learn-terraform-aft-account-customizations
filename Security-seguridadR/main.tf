@@ -13,7 +13,7 @@ module "kms" {
 
   tags = {
     Terraform   = "true"
-    Environment = "dev"
+    Environment = "prod"
   }
 }
 ```
